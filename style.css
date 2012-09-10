@@ -595,7 +595,11 @@ letter-spacing: -1px;
 .hidden{
 	display:none;
 }
-
+.event{
+	font-size:13px;
+	font-family: 'Arvo', serif;
+	font-weight:bold;
+}
 #sidebar #members .selected_member {
 	background-color:gray;
 }

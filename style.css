@@ -603,3 +603,6 @@ letter-spacing: -1px;
 #sidebar #members .selected_member {
 	background-color:gray;
 }
+.instrument-images img{
+	width:550px;
+}

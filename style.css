@@ -460,7 +460,8 @@ background: url(images/img04.gif) no-repeat center bottom;
 	text-transform: uppercase;
 }
 #members li p:hover{
-	background-color:gray;
+	color:#2483A6;
+	font-weight: bold;
 }
 #members li{
 	padding: 0px 20px 20px 0px;
@@ -517,6 +518,59 @@ form{
 	text-transform: uppercase;
 	font-family: 'Oswald', sans-serif;
 }
+.former li{
+	padding: 0px 0px 10px 0px;
+}
+.former li p{
+	font-size:18px;
+	background-color:black;
+	color:white;
+	padding: 0px;
+	padding-left:10px;
+	font-family: Electrolize;
+	text-transform: uppercase;
+	width: 200px;
+}
+.former li p:hover{
+	background-color:black;
+	color:white;
+
+}
+.former li{
+	list-style: none;
+	padding: 0px;
+}
+.former{
+	list-style: none;
+	padding: 5px;
+}
+#other-members{
+	float:left;
+	margin-top:170px;
+	margin-left:0px;
+}
+#other-members td{
+	padding: 0px;
+	vertical-align: top;
+}
+#other-members td ul{
+	padding: 0px;
+}
+#other-members td h2{
+	float:left;
+font-size: 24px;
+color: #262626;
+	border-bottom: 1px dashed #B3B0B0;
+
+}
+/*#sidebar h2 {
+height: 38px;
+margin-bottom: 20px;
+padding: 12px 0 0 0px;
+
+letter-spacing: -1px;
+
+}*/
 #banner img{
 	margin-left: 60px;
 	width:800px;

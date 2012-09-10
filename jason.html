@@ -174,11 +174,17 @@ Released   : 20120225
 </html>
 
 
+
 <script>
-	$('.members_sidebar').click(function(){		
+	if(!$('#member_detail_1').hasClass('hidden'))
+		$('#member_name_1').children('p').addClass('selected_member') 
+
+	$('.members_sidebar').click(function() {
+		$('.selected_member').removeClass('selected_member')
+		$(this).children('p').addClass('selected_member')
+
 		splitted_name = $(this).attr('id').split('_')
 		clicked_name_id = splitted_name[splitted_name.length-1]
-		console.log(clicked_name_id)
 		if(clicked_name_id > 0)
 			$('.member_details').addClass('hidden')
 			$('#member_detail_' + clicked_name_id).removeClass('hidden')

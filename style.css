@@ -539,3 +539,7 @@ form{
 .hidden{
 	display:none;
 }
+
+#sidebar #members .selected_member {
+	background-color:gray;
+}

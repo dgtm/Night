@@ -460,8 +460,8 @@ background: url(images/img04.gif) no-repeat center bottom;
 	text-transform: uppercase;
 }
 #members li p:hover{
-	color:#2483A6;
-	font-weight: bold;
+/*	color:#2483A6;
+*/	font-weight: bold;
 }
 #members li{
 	padding: 0px 20px 20px 0px;
@@ -473,7 +473,7 @@ background: url(images/img04.gif) no-repeat center bottom;
 	vertical-align: top;
 }
 .member-shots{
-	width:500px;
+	width:450px;
 }
 .extras{
 	padding:10px;
@@ -580,6 +580,8 @@ letter-spacing: -1px;
 #topfix img{
 	width:65px;
 	height:65px;
+	float:left;
+	padding: 0px 0px 5px 5px;
 }
 .instrument-images{
 	margin-top:40px;

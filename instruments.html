@@ -62,7 +62,7 @@ Released   : 20120225
  <!-- <a href="#" class="comments">Comments (64)</a> &nbsp;&bull;&nbsp; <a href="#" class="permalink">Full article</a></p>
  -->							<div class="entry">
 								<p class="instrument-images">
-									<img src="images/12.jpg"></img>
+									<img src="images/1.jpg"></img>
 								</p>
 							</div>
 						</div>
@@ -74,25 +74,25 @@ Released   : 20120225
 							<li id="members">
 								<h2>Instruments</h2>
 								<ul>
-									<li><a href="#"><p>BHUSYAH</p></a></li>
-									<li><a href="#"><p>YELAMBAR</p></a></li>
-									<li><a href="#"><p>TYAMKO</p></a></li>
-									<li><a href="#"><p>TUNGNA</p></a></li>
-									<li><a href="#"><p>TINCHU</p></a></li>
-									<li><a href="#"><p>SISHYAH</p></a></li>
-									<li><a href="#"><p>SARANGI</p></a></li>
-									<li><a href="#"><p>PWANGA</p></a></li>
-									<li><a href="#"><p>DHIME</p></a></li>
-									<li><a href="#"><p>DHYANGRO</p></a></li>
-									<li><a href="#"><p>GHUNGROO</p></a></li>
-									<li><a href="#"><p>KARNAL</p></a></li>
-									<li><a href="#"><p>MADAL</p></a></li>
-									<li><a href="#"><p>NAGARA</p></a></li>
-									<li><a href="#"><p>NARSHIMHA</p></a></li>
-									<li><a href="#"><p>NAY KHI</p></a></li>
-									<li><a href="#"><p>KWAKHENCHA</p></a></li>
-									<li><a href="#"><p>PILHRU</p></a></li>
-\								</ul>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='1'><p>BHUSYAH</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='2'><p>YELAMBAR</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='3'><p>TYAMKO</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='4'><p>TUNGNA</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='5'><p>TINCHU</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='6'><p>SISHYAH</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='7'><p>SARANGI</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='8'><p>PWANGA</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='9'><p>DHIME</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='10'><p>DHYANGRO</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='11'><p>GHUNGROO</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='12'><p>KARNAL</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='13'><p>MADAL</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='14'><p>NAGARA</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='15'><p>NARSHIMHA</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='16'><p>NAY KHI</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='17'><p>PILHRU</p></a></li>
+									<li><a class='instruments_sidebar' href="javascript:void(0)" instrument_image_id='18'><p>KWAKHENCHA</p></a></li>
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -110,3 +110,20 @@ Released   : 20120225
 <!-- end #footer -->
 </body>
 </html>
+
+
+
+<script>
+	if( !$('#sidebar .instruments_sidebar.selected_member').length > 0 )
+		$('#sidebar .instruments_sidebar:first').children('p').addClass('selected_member') 
+
+	$('.instruments_sidebar').click(function() {
+		$('.selected_member').removeClass('selected_member')
+		$(this).children('p').addClass('selected_member')
+
+		instrument_image_id = $(this).attr('instrument_image_id')
+		$('.post .entry .instrument-images img').attr('src', 'images/' + instrument_image_id + '.jpg')
+	})
+
+</script>
+

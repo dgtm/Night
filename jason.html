@@ -49,7 +49,7 @@ Released   : 20120225
 						<div id="menu">
 							<ul>
 								<li><a href="index.html">Home</a></li>
-								<li class="current_page_item"><a href="#">Biography</a></li>
+								<li class="current_page_item"><a href="people.html">Biography</a></li>
 								<li><a href="projects.html">Projects</a></li>
 								<li><a href="instruments.html">Instruments</a></li>
 								<li><a href="#">Events</a></li>
@@ -60,29 +60,81 @@ Released   : 20120225
 <!-- 					<div id="banner"><img src="images/17.jpg" width="940" height="300" alt="" /></div>
 	<br>
  -->	
- <br><br>				<div id="content">
+ <br><br>
+	 				<div id="content">
 						<div class="post">
-							<div class="member">Jason Kunwar</div>
+							<div class="member_details" id='member_detail_1'>
+								<div class="member">Jason Kunwar</div>
 <!-- 							<p class="meta">Posted by <a href="#">Someone</a> on February 25, 2012
  --> 
  <!-- <a href="#" class="comments">Comments (64)</a> &nbsp;&bull;&nbsp; <a href="#" class="permalink">Full article</a></p>
  -->							<div class="entry">
-								<table>
-									<tr>
-										<td>
-											<img class="member-shots" src="gallery/14.jpg"></img>
-										</td>
-										<td id ="topfix">
-											<img src="images/thumbs/gtr.jpg" title="Guitars"></img>
-											<img src="images/thumbs/9.jpg" title="Dhime"></img>
-											<br>
-											<img src="images/thumbs/mic.jpg" title="Vocals"></img>
+									<table>
+										<tr>
+											<td>
+												<img class="member-shots" src="gallery/14.jpg"></img>
+											</td>
+											<td id ="topfix">
+												<img src="images/thumbs/gtr.jpg" title="Guitars"></img>
+												<img src="images/thumbs/9.jpg" title="Dhime"></img>
+												<br>
+												<img src="images/thumbs/mic.jpg" title="Vocals"></img>
 
-											<img src="images/thumbs/5.jpg"></img>
-										</td>
-									</tr>
-								</table>
+												<img src="images/thumbs/5.jpg"></img>
+											</td>
+										</tr>
+									</table>
+								</div>
 							</div>
+
+							<div class="member_details hidden" id='member_detail_2'>
+								<div class="member">Niraj Shakya</div>
+<!-- 							<p class="meta">Posted by <a href="#">Someone</a> on February 25, 2012
+ --> 
+ <!-- <a href="#" class="comments">Comments (64)</a> &nbsp;&bull;&nbsp; <a href="#" class="permalink">Full article</a></p>
+ -->							<div class="entry">
+									<table>
+										<tr>
+											<td>
+												<img class="member-shots" src="gallery/13.jpg"></img>
+											</td>
+											<td id ="topfix">
+												<img src="images/thumbs/gtr.jpg" title="Guitars"></img>
+												<img src="images/thumbs/9.jpg" title="Dhime"></img>
+												<br>
+												<img src="images/thumbs/mic.jpg" title="Vocals"></img>
+
+												<img src="images/thumbs/5.jpg"></img>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+
+							<div class="member_details hidden" id='member_detail_3'>
+								<div class="member">Bibhusan Basnet</div>
+<!-- 							<p class="meta">Posted by <a href="#">Someone</a> on February 25, 2012
+ --> 
+ <!-- <a href="#" class="comments">Comments (64)</a> &nbsp;&bull;&nbsp; <a href="#" class="permalink">Full article</a></p>
+ -->							<div class="entry">
+									<table>
+										<tr>
+											<td>
+												<img class="member-shots" src="gallery/9.jpg"></img>
+											</td>
+											<td id ="topfix">
+												<img src="images/thumbs/gtr.jpg" title="Guitars"></img>
+												<img src="images/thumbs/9.jpg" title="Dhime"></img>
+												<br>
+												<img src="images/thumbs/mic.jpg" title="Vocals"></img>
+
+												<img src="images/thumbs/5.jpg"></img>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+
 						</div>
 						<div style="clear: both;">&nbsp;</div>
 					</div>
@@ -92,9 +144,9 @@ Released   : 20120225
 							<li id="members">
 								<h2>Members</h2>
 								<ul>
-									<li><a href="jason.html"><p>Jason</p></a></li>
-									<li><a href="niraj.html"><p>Niraj</p></a></li>
-									<li><a href="bibhusan.html"><p>Bibhusan</p></a></li>
+									<li><a class='members_sidebar' id='member_name_1' href="jason.html"><p>Jason</p></a></li>
+									<li><a class='members_sidebar' id='member_name_2' href="javascript:void(0)"><p>Niraj</p></a></li>
+									<li><a class='members_sidebar' id='member_name_3' href="javascript:void(0)"><p>Bibhusan</p></a></li>
 									<li><a href="#"><p>Jivan</p></a></li>
 									<li><a href="#"><p>Birat</p></a></li>
 									<li><a href="#"><p>Kushal</p></a></li>
@@ -120,3 +172,15 @@ Released   : 20120225
 <!-- end #footer -->
 </body>
 </html>
+
+
+<script>
+	$('.members_sidebar').click(function(){		
+		splitted_name = $(this).attr('id').split('_')
+		clicked_name_id = splitted_name[splitted_name.length-1]
+		console.log(clicked_name_id)
+		if(clicked_name_id > 0)
+			$('.member_details').addClass('hidden')
+			$('#member_detail_' + clicked_name_id).removeClass('hidden')
+	})
+</script>

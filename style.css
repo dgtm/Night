@@ -535,3 +535,7 @@ form{
 	width: 500px;
 	height: 250px;
 }
+
+.hidden{
+	display:none;
+}
